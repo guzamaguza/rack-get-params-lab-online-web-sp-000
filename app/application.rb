@@ -20,6 +20,8 @@ class Application
       add_item = req.params["item"]
       if add_item in @@items
       @@cart << add_item
+      else
+        resp.write "Error" 
       end
     else
       resp.write "Path Not Found"
